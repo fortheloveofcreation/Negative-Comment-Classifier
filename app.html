@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+
+  <title>Negative Comment Classification</title>
+
+
+  
+</head>
+
+<body style="background-image: url('pic.jpg'); background-repeat: no-repeat; background-size: cover;" onload="myFunction()>
+ <div class="login" align="center" >
+	<h1>Find The Negativity Score Of A Comment</h1>
+
+  
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input id='text' type="text" name="text" placeholder="Enter your text" required="required" size="25" style="font-size:25px;"/>
+
+      <button id='button' type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 20px;"> Predict</button>
+    </form>
+
+       <h3>{{ pred_tox }} <br><br>
+    {{ pred_sev }} <br><br>
+    {{ pred_obs }} <br><br>
+    {{ pred_ins }} <br><br>
+    {{ pred_thr }} <br><br>
+    {{ pred_ide }}</h3>
+
+
+ </div>
+</body>
+</html>
